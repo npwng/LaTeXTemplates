@@ -1,0 +1,75 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[letterpaper, left=2cm, right=2cm, top=2.54cm, bottom=2.54cm]{geometry}
+% https://www.mathcha.io/editor
+
+%%% --------------- Requirements --------------- %%% 
+\input{req/.info.tex}
+
+\usepackage{req/preamble}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+    pdfauthor=\docAuthor,
+    pdftitle=\docTitle,
+    pdfproducer={LaTeX with hyperref},
+    pdfcreator={pdflatex},
+}
+\usepackage[
+    style=ieee,
+    backend=biber,
+]{biblatex}                     % For citations
+\addbibresource{sections/References.bib} % Biliography file
+%%% --------------- Optionals --------------- %%% 
+% \usepackage[moderate]{savetrees}  % Shortens page: https://www.ctan.org/pkg/savetrees?lang=en
+% \usepackage{req/.darkmode}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[L]{\includegraphics[width=0.7cm]{assets/logo.png}} % adjust width as needed
+\fancyhead[C]{\small{\docTitle}}
+\fancyhead[R]{\thepage}
+% \renewcommand{\headrulewidth}{0pt} % remove header line
+
+%%% --------------- Begin document --------------- %%% 
+\begin{document}
+%% --------------- Titlepage --------------- %%% 
+\begin{titlepage}
+	\centering
+    \includegraphics[scale = 0.65]{assets/logo.png}\\[1.5 cm]	% University Logo
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \docTitle}
+	\rule{\linewidth}{0.2 mm} \\[0.5 cm]
+	{\large \docDate}\\[13 cm]
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \small
+			\emph{Author:}\\
+			\href{mailto:\docAuthorEmail}{\docAuthor}\\
+            \docAuthorPosition
+		\end{flushleft}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \small
+				\docAuthorID									% Your Student Number
+		\end{flushright}
+	\end{minipage}\\
+	\vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%% --------------- Content --------------- %%% 
+\include{sections/1-Example.tex}\newpage
+
+% \printbibliography
+
+
+
+
+\end{document}

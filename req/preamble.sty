@@ -1,0 +1,51 @@
+% https://www.ctan.org/
+\usepackage{amsmath,amsfonts,amsthm,amssymb,mathtools}  % Mathematics
+\usepackage[english]{babel}                              % Manages culturally-determined typographical (and other) rules for a wide range of languages
+\usepackage{cancel}
+\usepackage{chngcntr}                                    % Change the resetting of counters (used for appendix)
+\usepackage{csquotes}                                    % Can't remember
+\usepackage{enumitem}                                    % Provides user control over the layout of the three basic list environments: enumerate, itemize, and description
+\usepackage{float}                                       % Messing with floats - H
+\usepackage{graphicx}                                    % Graphics
+\usepackage{index}                                       % Indexing macros to provide better support for indexing
+\usepackage{lipsum}                                      % For blindtext
+\usepackage{longtable}                                   % Tables longer than a page
+\usepackage{mathabx}                                     % Arrows
+\usepackage{mathtools}                                   % Mathtools provides a series of packages designed to enhance the appearance of documents containing a lot of mathematics
+\usepackage{microtype}                                   % Tries to lift the burden of deciding about settings as much as possible from the user
+\usepackage{multicol}                                    % Multicol
+\usepackage{subcaption}                                  % For subcaptions -- required for custom caption format command
+\usepackage{siunitx}           % SI Units
+\usepackage{textcomp}
+\usepackage{transparent}
+\usepackage{titlesec}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{wrapfig}
+
+
+\usepackage{pgfplots}                                    % Plot
+\usetikzlibrary{patterns}
+\pgfplotsset{compat=1.18}
+\newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
+
+% For multicols
+\setlength{\columnsep}{1 cm}
+\newcommand{\squeezeup}{\vspace{-20mm}}
+
+% Custom caption formatting
+\DeclareCaptionFormat{custom}
+{%
+    \textbf{#1#2} #3
+}
+\captionsetup{format=custom}
+
+\usepackage{hhline}
+\usepackage{multirow}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage{setspace} % For additional spacing options, if needed
+% Adjust space between paragraphs
+\renewcommand{\baselinestretch}{1.15}
+\usepackage{pdfpages}
