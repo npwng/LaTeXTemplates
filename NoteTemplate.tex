@@ -1,0 +1,48 @@
+\documentclass[letterpaper,12pt]{report}
+\usepackage[letterpaper, left=2cm, right=2cm, top=2.54cm, bottom=2.54cm]{geometry}
+% https://www.mathcha.io/editor
+
+%%% --------------- Requirements --------------- %%% 
+\input{req/.info.tex}
+\usepackage{req/preamble}
+\usepackage{req/tcolourbox}
+% \usepackage{theoremref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\hypersetup{
+    % colorlinks=true,
+    % linkcolor=black,
+    % filecolor=black,      
+    % urlcolor=blue,
+    % citecolor=black,
+    pdfauthor=\userClass,
+    pdftitle=\userClass,
+    pdfproducer={LaTeX with hyperref},
+    pdfcreator={pdflatex},
+}
+\usepackage[
+    style=ieee,
+    backend=biber,
+]{biblatex}                     % For citations
+\addbibresource{References.bib} % Biliography file
+%%% --------------- Optionals --------------- %%% 
+% \usepackage[moderate]{savetrees}  % Shortens page: https://www.ctan.org/pkg/savetrees?lang=en
+\usepackage{req/.darkmode}
+
+
+%%% --------------- Begin document --------------- %%% 
+\begin{document}
+
+%%% --------------- Titlepage --------------- %%% 
+    \title{\Large{\textbf{\userClass}}}
+    \author{\href{mailto:\userEmail}{\userName}}
+    \date{\titleDate}
+\maketitle
+\tableofcontents
+\newpage
+
+%%% --------------- Content --------------- %%% 
+\input{sections/Example.tex}
+
+
+\end{document}
