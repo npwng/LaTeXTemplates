@@ -1,0 +1,27 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage[letterpaper, margin=1.9cm]{geometry}
+% https://www.mathcha.io/editor
+
+%%% --------------- Requirements --------------- %%% 
+\input{req/.info.tex}
+\usepackage{req/preamble}
+\usepackage{req/tcolourbox}
+\usepackage{req/.header}
+\usepackage[
+    style=ieee,
+    backend=biber,
+]{biblatex}                     % For citations
+\addbibresource{References.bib} % Biliography file
+%%% --------------- Optionals --------------- %%% 
+% \usepackage[moderate]{savetrees}  % Shortens page: https://www.ctan.org/pkg/savetrees?lang=en
+% \usepackage{req/.darkmode}
+
+%%% --------------- Begin document --------------- %%% 
+\begin{document}
+%%% --------------- Content --------------- %%% 
+\input{sections/1-Example.tex}
+
+
+% \newpage
+% \printbibliography[title={Bibliography}]
+\end{document}

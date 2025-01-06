@@ -1,0 +1,11 @@
+\@ifpackageloaded{pdfpages}{}{\usepackage{pdfpages}}
+\@ifpackageloaded{transparent}{}{\usepackage{transparent}}
+\@ifpackageloaded{multirow}{}{\usepackage{multirow}}
+\@ifpackageloaded{fancyhdr}{}{\usepackage{fancyhdr}}
+\@ifpackageloaded{nameref}{}{\usepackage{nameref}}
+\pagestyle{fancy}
+\newcommand*{\currentname}{\@currentlabelname}
+%%
+\lhead{\titleDate}
+\chead{\userClass\\\userAssign}
+\rhead{\href{mailto:\userEmail}{\userName}\\\userID}
